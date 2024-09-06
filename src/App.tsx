@@ -1,6 +1,4 @@
 import { Banner } from './components/Banner'
-import ImageDisplayer from './components/ImageDisplayer'
-import DesktopImage from './assets/images/desktop_chart.png';
 import AppAdvert from './components/AppAdvert';
 import HowItWorks from './components/HowItWorks';
 import Team from './components/Team';
@@ -16,7 +14,6 @@ function App() {
     <>
       <Navbar />
       <Banner />
-      <ImageDisplayer src={DesktopImage} />
       <Supporter />
       <AppAdvert />
       <HowItWorks />
