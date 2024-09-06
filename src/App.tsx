@@ -1,13 +1,12 @@
-import { Banner } from './components/Banner'
-import AppAdvert from './components/AppAdvert';
-import HowItWorks from './components/HowItWorks';
-import Team from './components/Team';
-import NewsLetter from './components/NewsLetter';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-import { ScrollRestoration } from 'react-router-dom';
-import Supporter from './components/Supporter';
-
+import { ScrollRestoration } from "react-router-dom";
+import AppAdvert from "./components/AppAdvert";
+import { Banner } from "./components/Banner";
+import Footer from "./components/Footer";
+import HowItWorks from "./components/HowItWorks";
+import Navbar from "./components/Navbar";
+import NewsLetter from "./components/NewsLetter";
+import Supporter from "./components/Supporter";
+import Team from "./components/Team";
 
 function App() {
   return (
@@ -22,7 +21,7 @@ function App() {
       <Footer />
       <ScrollRestoration />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
