@@ -64,14 +64,14 @@ export default function AppAdvert() {
                   <span
                     className={`bg-[#F3EDFD] ${idx == 0 ? "event_one" : ""} ${idx == 2 ? "event_two" : ""} ${
                       idx == 1 ? "event" : ""
-                    } inline-block px-4 py-1 md:text-base lg:text-xl rounded-full text-primary`}
+                    } inline-block px-4 py-1 md:text-base lg:text-xl rounded-full text-primary mt-5`}
                   >
                     {item.detail}
                   </span>
                   <h3
                     className={`max-w-sm ${idx == 1 ? "event" : ""} ${idx == 2 ? "event_two" : ""} ${
                       idx == 0 ? "lg:pt-12 lg:pb-16 py-10 event_one" : "py-8 lg:py-12"
-                    } lg:text-[40px] md:text-3xl `}
+                    } lg:text-[40px] md:text-3xl`}
                   >
                     {item.catchPhrase}
                   </h3>
