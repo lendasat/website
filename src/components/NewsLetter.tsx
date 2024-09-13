@@ -58,6 +58,7 @@ export default function NewsLetter() {
         .catch(error => alert(error));
   }
 
+  // @ts-ignore
   return (
     <section className="justify-start pt-36" id="subscribe">
       <div className="py-14 lg:pl-20 md:pl-14 w-full md:w-fit">
@@ -72,7 +73,7 @@ export default function NewsLetter() {
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="space-y-3 md:space-y-0 md:flex items-start gap-3 md:w-[400px]"
-                netlify netlify-honeypot="bot-field" hidden
+                data-netlify="true" netlify-honeypot="bot-field" hidden
             >
               <FormField
                   control={form.control}
