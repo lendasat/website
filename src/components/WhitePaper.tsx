@@ -51,26 +51,5 @@ export default function WhitePaper() {
         </div>
       </div>
     </section>
-    // <section className="justify-start pt-10" id="whitepaper">
-    //   <div className="bg-indigo-800 p-8 rounded-lg shadow-lg w-full text-center">
-    //     <div className="max-w-4xl mx-auto">
-    //       <h3 className={`text-4xl font-bold mb-4`}>
-    //         Self-custodial loans powered by DLCs
-    //       </h3>
-    //       <p className="mb-6 font-bold">
-    //         Built with DLCs, you stay in control of your funds at all times. An oblivious oracle attests to the market price at loan termination, allowing all parties to enforce the terms of the loan contract unilaterally.
-    //       </p>
-    //       <div className="flex justify-center">
-    //         <Link
-    //           to="https://whitepaper.lendasat.com/lendasat-whitepaper.pdf"
-    //           target={"_blank"}
-    //           className="w-full sm:w-auto text-[#2E1B52] flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#F3F3F3] hover:bg-[#4E2E8D] hover:text-white transition-colors ease-linear duration-300 heading"
-    //         >
-    //           <span>Whitepaper</span> <GoArrowUpRight className="arrow_movement" />
-    //         </Link>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </section>
   );
 }
