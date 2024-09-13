@@ -27,26 +27,21 @@ export default function ForLenders() {
             For Lenders
           </span>
           <h1 className="mb-7 text-left icon xl:text-[50px] xl:leading-[1.2] lg:text-4xl md:text-3xl">
-            Earn returns by securing <br className="hidden lg:block" />{" "}
-            <span className="text-primary">loans with Bitcoin</span>
+            Earn interest with <br className="hidden lg:block" /> <span className="text-primary">bitcoin-secured</span>
+            {" "}
+            loans
           </h1>
         </div>
         <div className="flex flex-col items-start gap-5">
           <p className="text-base icon md:text-lg lg:text-xl text-[#595959]">
-            Lendasat lets you take instant loans to pay Lightning invoices. No need to sell your Bitcoin.
+            Whether fiat or stable coins. At Lendasat you can earn more with your money.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
               to="#subscribe"
               className="text-white icon flex items-center gap-2 px-8 py-4 rounded-full bg-primary hover:bg-black transition-colors ease-linear duration-300"
             >
-              <span>Try It</span> <GoArrowUpRight className="arrow_movement" />
-            </Link>
-            <Link
-              to="#how_it_works"
-              className="text-[#2E1B52] flex icon items-center gap-2 px-8 py-4 rounded-full bg-[#F3F3F3] hover:bg-[#4E2E8D] hover:text-white transition-colors ease-linear duration-300"
-            >
-              <span>Learn More</span> <GoArrowUpRight className="arrow_movement" />
+              <span>Get In touch</span> <GoArrowUpRight className="arrow_movement" />
             </Link>
           </div>
         </div>

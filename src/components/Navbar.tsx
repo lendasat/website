@@ -49,10 +49,6 @@ export default function Navbar() {
                 hash: "For Lenders",
                 url: "/lenders",
               },
-              {
-                hash: "Features",
-                url: "/#features",
-              },
             ].map((items, idx) => {
               return (
                 <li key={idx} onClick={() => setOpen(false)} className="text-3xl md:text-base">

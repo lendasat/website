@@ -44,9 +44,7 @@ export const Banner = () => {
               <span>Try It</span> <GoArrowUpRight className="arrow_movement" />
             </Link>
             <Link
-              to="https://whitepaper.lendasat.com/lendasat-whitepaper.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              to="#how-it-works"
               className="w-full sm:w-auto text-[#2E1B52] flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#F3F3F3] hover:bg-[#4E2E8D] hover:text-white transition-colors ease-linear duration-300 heading"
             >
               <span>Learn More</span> <GoArrowUpRight className="arrow_movement" />

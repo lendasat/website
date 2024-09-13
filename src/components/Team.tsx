@@ -35,20 +35,13 @@ export default function Team() {
           <div className="bg-[#ECE4FC] members w-full px-12 pt-8 pb-11 xl:min-h-[450px] min-h-[400px] flex flex-col justify-between rounded-3xl">
             <div>
               <h4 className="mb-7 xl:text-4xl text-3xl">
-                Our Fantastic <br />Team
+                <br />Team
               </h4>
               <p className="text-black xl:text-base text-sm">
-                We offer diverse roles <br /> and opportunities for our employees.{" "}
-                <br />Interested in joining our team? Check <br /> out our current openings:
+                We are a group of Bitcoin OGs, software engineers, researchers and traders with the mission to build no
+                bullshit products on Bitcoin.
               </p>
             </div>
-
-            <Link
-              to=""
-              className="text-sm font-medium bg-white inline-block px-5 rounded-3xl w-fit font-monument hover:bg-black transition-colors ease-linear duration-300 hover:text-white"
-            >
-              <span className="mb-3.5 inline-block">Join our team</span>
-            </Link>
           </div>
           {TeamList.map((items, index) => {
             return (
@@ -62,7 +55,7 @@ export default function Team() {
                   <div className="pl-5 space-y-2">
                     <div className=" flex items-baseline justify-between">
                       <h5>{items.title}</h5>
-                      <Link to={items.twitterHash}>
+                      <Link to={items.twitterHash} target={"_blank"}>
                         <FaXTwitter />
                       </Link>
                     </div>
@@ -80,16 +73,16 @@ export default function Team() {
 
 const TeamList = [
   {
-    src: TeamMember,
-    title: "Lucas",
-    position: "Head of Research",
-    twitterHash: "https://www.x.com/@10101_lucas",
-  },
-  {
     src: TeamMember1,
     title: "Philipp",
     position: "CEO",
-    twitterHash: "https://www.x.com/@bonomat",
+    twitterHash: "https://www.x.com/bonomat",
+  },
+  {
+    src: TeamMember,
+    title: "Lucas",
+    position: "Head of Research",
+    twitterHash: "https://www.x.com/10101_lucas",
   },
   {
     src: TeamMember2,

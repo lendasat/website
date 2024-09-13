@@ -1,8 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import Mobile from "./../assets/images/mobile_half.png";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { GoArrowUpRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 export default function HowItWorks() {
@@ -21,7 +22,7 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <section>
+    <section id={"how-it-works"}>
       <div className="max-w-6xl">
         <h3 className="pt-10 mb-10 text-center slope">How it Works</h3>
 
@@ -30,15 +31,22 @@ export default function HowItWorks() {
             <div>
               <span className="bg-[#ECE4FC] slope inline-block py-1 px-3 rounded-full text-lg">How it works</span>
               <h4 className="mb-10 slope">
-                Immediate loans <br /> backed by{" "}
-                <span className="text-primary">
-                  Bitcoin <br /> collateral
-                </span>
+                Instant <span className="text-primary">Bitcoin-collateralized</span> loans <br />
               </h4>
-              <p className="slope md:text-xl">Lendasat makes borrowing super easy.</p>
+              <p className="slope md:text-xl">
+                No KYC, no credit checks, no rehypothecation. You put put bitcoin as a collateral and receive a stable
+                coins loan.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-1 mt-5">
+                <Link
+                  to="#subscribe"
+                  className="w-full sm:w-auto text-white flex gap-2 px-8 py-1 rounded-full bg-primary hover:bg-black transition-colors ease-linear duration-300 heading"
+                >
+                  <span>Try It</span> <GoArrowUpRight className="arrow_movement" />
+                </Link>
+              </div>
             </div>
             <div className="mt-20 slope">
-              <img src={Mobile} alt="Mobile Screen" className="object-contain object-center h-full w-full" />
             </div>
           </div>
           <div className="space-y-5 pb-10">
@@ -62,18 +70,18 @@ export default function HowItWorks() {
 
 const Steps = [
   {
-    title: "Give us your Lightning invoice",
+    title: "Request a loan",
     content:
-      "Paste a BOLT 11 invoice you want us to pay. It can be for a giftcard (Bitrefill), a utility bill (Livingroom of Satoshi), or for cash (with Strike).",
+      "Pick your preferred loan terms from a list of offers or post your own loan request. We will find you the right match.",
   },
   {
     title: "Lock up your Bitcoin collateral",
     content:
-      "Lock up your Bitcoin collateral into a smart contract using Lightning. The amount depends on your selected Loan To Value (LTV) ratio.",
+      "Lock up your Bitcoin collateral into a smart contract. The amount depends on your selected Loan To Value (LTV) ratio.",
   },
   {
-    title: "Get the goods",
+    title: "Receive the funds",
     content:
-      "We pay your invoice and you get what you want. After you pay back the loan, you get back your Bitcoin collateral on Lightning.",
+      "The lender will transfer the stable coins to a from you selected address. Fully trustless and without intermediaries.",
   },
 ];

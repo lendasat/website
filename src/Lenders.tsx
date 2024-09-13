@@ -1,13 +1,13 @@
+import Contact from "@/components/lender-components/Contact.tsx";
+import HowItWorksLender from "@/components/lender-components/HowItWorksLender.tsx";
 import { ScrollRestoration } from "react-router-dom";
-import DesktopImage2 from "./assets/images/desktop_second_chart.png";
+import DesktopImage2 from "./assets/images/lender_desktop_app.png";
 import Footer from "./components/Footer";
 import ForLenders from "./components/ForLenders";
-import HowItWorks from "./components/HowItWorks";
-import ImageDisplayer from "./components/ImageDisplayer";
-import Interest from "./components/Interest";
+import ImageDisplayer from "./components/lender-components/ImageDisplayer.tsx";
+import Interest from "./components/lender-components/Interest.tsx";
+import Payouts from "./components/lender-components/Payouts.tsx";
 import Navbar from "./components/Navbar";
-import NewsLetter from "./components/NewsLetter";
-import Payouts from "./components/Payouts";
 
 export default function Lenders() {
   return (
@@ -16,9 +16,9 @@ export default function Lenders() {
       <ForLenders />
       <ImageDisplayer src={DesktopImage2} />
       <Interest />
-      <HowItWorks />
+      <HowItWorksLender />
       <Payouts />
-      <NewsLetter />
+      <Contact />
       <Footer />
       <ScrollRestoration />
     </>

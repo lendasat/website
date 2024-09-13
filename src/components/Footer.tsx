@@ -1,5 +1,5 @@
-import { FaTwitter } from "react-icons/fa";
-import { FaDiscord, FaYoutube } from "react-icons/fa6";
+import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Lendasat from "./../assets/images/lendasat.png";
 
@@ -9,37 +9,28 @@ export default function Footer() {
       <div className="flex flex-col justify-between items-start md:min-h-[280px] gap-6">
         <img src={Lendasat} alt="Company Logo" className="h-5 w-auto" />
         <div className=" flex items-center gap-4 text-2xl text-[#404040]">
-          <Link to="https://x.com/lendasat">
+          <Link to="https://x.com/lendasat" target={"_blank"}>
             <FaTwitter />
           </Link>
-          <Link to="">
+          <Link to="https://discord.gg/kyxqWFKMCF" target={"_blank"}>
             <FaDiscord />
           </Link>
           <Link to="">
-            <FaYoutube />
+            <FaGithub to={"https://github.com/lendasat"} target={"_blank"} />
           </Link>
         </div>
       </div>
       <div className="">
-        <h6 className="font-monument text-base mb-7">Company</h6>
+        <h6 className="font-monument text-base mb-7">Resources</h6>
 
         <div className="text-[#404040] text-sm md:text-base flex flex-col items-start gap-4">
-          <Link to="">
-            About
-          </Link>
           <Link to="">
             Terms
           </Link>
           <Link to="">
             Privacy
           </Link>
-          <Link to="">
-            Brand
-          </Link>
-          <Link to="">
-            Press Kit
-          </Link>
-          <Link to="">
+          <Link to="mailto:office@lendasat.com">
             Contact Us
           </Link>
         </div>

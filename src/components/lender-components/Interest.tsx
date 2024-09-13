@@ -1,7 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Triangle from "./../assets/icons/traiangle-2.png";
+import { FaFileInvoiceDollar } from "react-icons/fa";
+import { GrLineChart, GrPieChart } from "react-icons/gr";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -23,7 +24,9 @@ export default function Interest() {
     <section>
       <div className="max-w-6xl">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h3 className="mb-3 int">The bitcoin way to earn interest</h3>
+          <h3 className="mb-3 int">
+            The <span className="text-primary">bitcoin-way</span> to earn interest
+          </h3>
           <p className="md:text-lg int lg:text-xl text-sm">
             One platform to manage your loans, monitor the collateral and to invest in bitcoin-backed products.
           </p>
@@ -37,7 +40,7 @@ export default function Interest() {
                 } rounded-3xl min-h-[400px] pb-10 md:min-h-[450px]`}
                 key={idx}
               >
-                <img src={Triangle} alt="Icon" className={`mb-4 h-10 w-auto`} />
+                {items.img}
                 <div className="h-32">
                   <h4 className={`mb-6 ${idx == 1 ? "text-primary" : "text-black]"} max-w-xs`}>{items.title}</h4>
                 </div>
@@ -54,16 +57,58 @@ export default function Interest() {
 const InterestDeals = [
   {
     title: "Transparent and secure",
+    img: (
+      <div
+        style={{
+          backgroundColor: "rgba(255,255,255,0.06)",
+          borderRadius: "20%",
+          padding: "12px",
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <GrPieChart style={{ color: "#623AB0" }} size="32px" />
+      </div>
+    ),
     deal:
       "The bitcoin collateral is locked on-chain and visible 24/7. The contracts are immune to manipulation, rehypothecation or theft.",
   },
   {
     title: "Liquidity risk minimized ",
+    img: (
+      <div
+        style={{
+          backgroundColor: "rgba(255,255,255,0.06)",
+          borderRadius: "20%",
+          padding: "12px",
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <FaFileInvoiceDollar style={{ color: "#623AB0" }} size="32px" />
+      </div>
+    ),
     deal:
       "Your investment is always secured by bitcoin collateral exceeding its value and watched by an automatic liquidation engine.",
   },
   {
     title: "High yield",
+    img: (
+      <div
+        style={{
+          backgroundColor: "rgba(255,255,255,0.06)",
+          borderRadius: "20%",
+          padding: "12px",
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <GrLineChart style={{ color: "#623AB0" }} size="32px" />
+      </div>
+    ),
     deal:
       "Despite a very low risk profile, our loans offer higher returns than traditional fixed-term products.its value and watched by an automatic liquidation engine.",
   },

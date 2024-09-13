@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "react-router-dom";
-import Payout from "./../assets/images/payout.png";
+import Payout from "../../assets/images/active_loans.png";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

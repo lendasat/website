@@ -1,15 +1,12 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useGSAP } from "@gsap/react";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { gsap } from "gsap";
-import { GoArrowUpRight } from "react-icons/go";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -51,10 +48,10 @@ export default function NewsLetter() {
     <section className="justify-start pt-36" id="subscribe">
       <div className="py-14 lg:pl-20 md:pl-14 w-full md:w-fit">
         <h3 className="news">
-          Sign up for early <br />access
+          Sign up for early access
         </h3>
         <p className="news md:text-lg my-5">
-          Enter your Email, X.com handle or NPub to be <br /> among the first to try out Lendasat.
+          Enter your Email, X.com handle or NPub to be among the first to try out Lendasat.
         </p>
         <div>
           <Form {...form}>
@@ -83,7 +80,6 @@ export default function NewsLetter() {
                 className="news text-white flex items-center gap-2 h-12 px-5 rounded-full bg-[#4E2E8D] w-fit"
               >
                 <span>Get early access</span>
-                <GoArrowUpRight />
               </Button>
             </form>
           </Form>
