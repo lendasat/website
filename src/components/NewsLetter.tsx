@@ -11,7 +11,7 @@ import { z } from "zod";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const formSchema = z.object({
-  email: z.string().email(),
+  email: z.string(),
 });
 
 export default function NewsLetter() {
@@ -37,11 +37,25 @@ export default function NewsLetter() {
     },
   });
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+    const encodedBody = encode({ "form-name": "contact", ...values });
+    console.log(`Posting ${encodedBody}`);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encodedBody
+    })
+        .then(() => alert("Successfully signed up!"))
+        .catch(error => alert(error));
   }
 
   return (
@@ -54,30 +68,32 @@ export default function NewsLetter() {
           Enter your Email, X.com handle or NPub to be among the first to try out Lendasat.
         </p>
         <div>
-          <Form {...form}>
+          <Form {...form} >
             <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-3 md:space-y-0 md:flex items-start gap-3 md:w-[400px]"
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-3 md:space-y-0 md:flex items-start gap-3 md:w-[400px]"
+                netlify netlify-honeypot="bot-field" hidden
             >
               <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem className="flex-grow news">
-                    <FormControl>
-                      <Input
-                        placeholder="Enter email"
-                        {...field}
-                        className="bg-[#E8E8E8] focus-visible:ring-0 border-0 rounded-full placeholder:text-secondary text-secondary pl-5 h-12 min-w-lg"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
+                  control={form.control}
+                  name="email"
+                  render={({field}) => (
+                      <FormItem className="flex-grow news">
+                        <FormControl>
+                          <Input
+                              placeholder="Enter email"
+                              {...field}
+                              className="bg-[#E8E8E8] focus-visible:ring-0 border-0 rounded-full placeholder:text-secondary text-secondary pl-5 h-12 min-w-lg"
+                          />
+                        </FormControl>
+                        <FormMessage/>
+                      </FormItem>
+                  )}
               />
+              <input type="hidden" name="form-name" value="contact"/>
               <Button
-                type="submit"
-                className="news text-white flex items-center gap-2 h-12 px-5 rounded-full bg-[#4E2E8D] w-fit"
+                  type="submit"
+                  className="news text-white flex items-center gap-2 h-12 px-5 rounded-full bg-[#4E2E8D] w-fit"
               >
                 <span>Get early access</span>
               </Button>
