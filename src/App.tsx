@@ -6,6 +6,9 @@ import Footer from "./components/Footer";
 import HowItWorks from "./components/HowItWorks";
 import Navbar from "./components/Navbar";
 import NewsLetter from "./components/NewsLetter";
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize('G-E302364ZGE');
 
 function App() {
   return (
