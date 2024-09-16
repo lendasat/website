@@ -24,12 +24,6 @@ export default function Footer() {
         <h6 className="font-monument text-base mb-7">Resources</h6>
 
         <div className="text-[#404040] text-sm md:text-base flex flex-col items-start gap-4">
-          <Link to="">
-            Terms
-          </Link>
-          <Link to="">
-            Privacy
-          </Link>
           <Link to="mailto:office@lendasat.com">
             Contact Us
           </Link>
