@@ -1,7 +1,7 @@
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import Lendasat from "./../assets/images/lendasat.png";
+import Lendasat from "./../assets/images/lendasat.svg";
 
 export default function Footer() {
   return (

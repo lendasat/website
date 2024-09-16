@@ -1,7 +1,7 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "./../assets/images/lendasat.png";
+import Logo from "./../assets/images/lendasat.svg";
 
 export default function Navbar() {
   const [open, setOpen] = React.useState(false);

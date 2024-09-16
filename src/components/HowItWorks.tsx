@@ -31,11 +31,10 @@ export default function HowItWorks() {
             <div>
               <span className="bg-[#ECE4FC] slope inline-block py-1 px-3 rounded-full text-lg">How it works</span>
               <h4 className="mb-10 slope">
-                Instant <span className="text-primary">Bitcoin-collateralized</span> loans <br />
+                <span className="text-primary">Bitcoin-collateralized</span> loans <br />
               </h4>
               <p className="slope md:text-xl">
-                No KYC, no credit checks, no rehypothecation. You put put bitcoin as a collateral and receive a stable
-                coins loan.
+                No rehypothecation, no KYC, no credit checks. You put up bitcoin as a collateral and receive a stable coins loan.
               </p>
               <div className="flex flex-col sm:flex-row gap-1 mt-5">
                 <Link

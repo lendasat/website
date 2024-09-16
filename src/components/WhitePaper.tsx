@@ -24,7 +24,7 @@ export default function WhitePaper() {
 
   return (
     <section id="whitepaper">
-      <div className="max-w-6xl">
+      <div className="max-w-6xl whitepaper">
         <div className="grid lg:grid-cols-1 gap-10 px-6 md:px-10 lg:px-12 pt-12 how_it_works rounded-3xl md:rounded-[33px]">
           <div className="flex flex-col items-start justify-between">
             <div>
