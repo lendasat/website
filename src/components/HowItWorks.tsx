@@ -34,7 +34,8 @@ export default function HowItWorks() {
                 <span className="text-primary">Bitcoin-collateralized</span> loans <br />
               </h4>
               <p className="slope md:text-xl">
-                No rehypothecation, no KYC, no credit checks. You put up bitcoin as a collateral and receive a stable coins loan.
+                No rehypothecation, no KYC, no credit checks. You put up bitcoin as a collateral and receive a stable
+                coins loan.
               </p>
               <div className="flex flex-col sm:flex-row gap-1 mt-5">
                 <Link
