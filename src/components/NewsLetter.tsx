@@ -94,7 +94,7 @@ export default function NewsLetter() {
           <form
             name="waitinglist"
             method="POST"
-            className="flex sm:flex-row gap-2 items-center mt-5 mb-10"
+            className="flex flex-col sm:flex-row gap-2 items-center mt-5 mb-10"
             data-netlify="true"
             onSubmit={handleSubmit}
           >
@@ -125,6 +125,7 @@ export default function NewsLetter() {
             </Link>
           </form>
         </div>
+
         {error && (
           <Callout.Root color="red" role="alert">
             <Callout.Icon>

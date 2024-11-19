@@ -15,8 +15,8 @@ export default function Footer() {
           <Link to="https://discord.gg/kyxqWFKMCF" target={"_blank"}>
             <FaDiscord />
           </Link>
-          <Link to="">
-            <FaGithub to={"https://github.com/lendasat"} target={"_blank"} />
+          <Link to={"https://github.com/lendasat"} target={"_blank"}>
+            <FaGithub />
           </Link>
         </div>
       </div>
