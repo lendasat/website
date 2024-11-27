@@ -1,10 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { AlertCircle } from "lucide-react";
-import { useNavigate, useRouteError } from "react-router-dom";
+import { isRouteErrorResponse, useNavigate, useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
   const error = useRouteError();
   const navigate = useNavigate();
+
+  let errorMessage: string;
+
+  if (isRouteErrorResponse(error)) {
+    // error is type `ErrorResponse`
+    errorMessage = error.statusText;
+  } else if (error instanceof Error) {
+    errorMessage = error.message;
+  } else if (typeof error === "string") {
+    errorMessage = error;
+  } else {
+    console.error(error);
+    errorMessage = "Unknown error";
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-8">
@@ -24,7 +38,7 @@ const ErrorPage = () => {
         </p>
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
           <p className="text-red-700 italic">
-            {error.statusText || error.message || "Unknown Error"}
+            {errorMessage}
           </p>
         </div>
         <Button
